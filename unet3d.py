@@ -1338,20 +1338,20 @@ def is_model_2d(model):
         model = model.module
     return isinstance(model, UNet2D)
 
-model = UNet3D(
-    in_channels=3,
-    out_channels=3,
-    is_segmentation=False,
-    final_sigmoid=False
-)
+# model = UNet3D(
+#     in_channels=3,
+#     out_channels=3,
+#     is_segmentation=False,
+#     final_sigmoid=False
+# )
 
-# Simulate a batch of 2 RGB video clips, each with 8 frames of size 64x64
-x = torch.randn(2, 3, 8, 64, 64)  # (batch, channels, time/depth, height, width)
+# # Simulate a batch of 2 RGB video clips, each with 8 frames of size 64x64
+# x = torch.randn(2, 3, 8, 64, 64)  # (batch, channels, time/depth, height, width)
 
-# Run forward pass
-output = model(x)
+# # Run forward pass
+# output = model(x)
 
-# Check output
-print(f"Input shape:  {x.shape}")
-print(f"Output shape: {output.shape}")
+# # Check output
+# print(f"Input shape:  {x.shape}")
+# print(f"Output shape: {output.shape}")
 
